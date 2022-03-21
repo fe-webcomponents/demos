@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Demo-my-image</title>
+    <script>
+        class MyImg extends HTMLImageElement {
+          constructor() {
+            super()
+            const src = 'http://5b0988e595225.cdn.sohucs.com/images/20181023/17ec85f2c9d34f5b9570ee826ea077fe.jpeg'
+            setTimeout(() => {
+              this.src = src
+            }, 1000)
+          }
+        }
+        
+        
+        customElements.define('my-img', MyImg, {
+          extends: 'img',
+        })
+        </script>
+</head>
+
+<body>
+    <img is="my-img" />
+</body>
+
+</html>

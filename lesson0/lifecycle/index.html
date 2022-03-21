@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <bfs-parent>
+        <bfs-children></bfs-children>
+    </bfs-parent>
+    <script src="./comp.js"></script>
+    <script>
+        const _bfsParent =  document.querySelector('bfs-parent')
+        const _bfsChildren = document.querySelector('bfs-children')
+
+        setTimeout(() => {
+            _bfsParent.setAttribute('path', "old-path")
+            _bfsChildren.setAttribute('path', 'children-old-path')
+            setTimeout(() => {
+                _bfsParent.setAttribute('path', "new-path")
+            },10)
+        },500)
+
+    </script>
+</body>
+</html>

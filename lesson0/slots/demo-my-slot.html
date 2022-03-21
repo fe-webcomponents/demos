@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo2</title>
+    <style>
+      .wrapper {
+        background: blue;
+      }
+      .middle-div{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <my-com class="wrapper" cusAttr="我是自定义属性">
+      <span class="middle-div" slot="middle">Middle</span>
+      <h2 slot="bottom">Bottom</h2>
+      <div slot="head">Head</div>
+    </my-com>
+    <script src="./coms.js"></script>
+  </body>
+</html>
